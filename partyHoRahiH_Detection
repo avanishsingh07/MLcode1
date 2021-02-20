@@ -1,0 +1,18 @@
+import os
+def partyHoRahiH(PartyMLdoc1):
+    with open(PartyMLdoc1,"r") as f:
+        fileContant=f.read()
+    if "party ho rahi h" in fileContant.lower():
+        return True
+    else:
+        return False
+if __name__=="__main__":
+    dir_contents=os.listdir()
+    for items in dir_contents:
+        if items.endswith('party ho rahi h'):
+            print("Detecting _party ho rahi h_ in {item}")
+            partyHoRahiH(item)
+            if(flag):
+                print(f"_party ho rahi h_ in {item}")
+            else:
+                print(f"Not Found")
